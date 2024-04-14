@@ -13,7 +13,7 @@ url = environ.get("ATLAS_URL")
 uri = f"mongodb+srv://{user}:{pwd}@{url}"
 client = MongoClient(uri)
 database = client.get_database(db)
-users_collection = database.get_collection("users")
+users_collection = database.get_collection("Users")
 
 def create_user(fullname, username, email, password):
     """

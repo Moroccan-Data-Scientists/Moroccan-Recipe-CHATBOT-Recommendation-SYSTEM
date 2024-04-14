@@ -20,7 +20,7 @@ def status():
 # Protected route requiring authentication
 @app.get('/protected')
 def protected(request: Request, token:str =  Depends(protected_route)):
-    return {"message": "You are protected!"}
+    return {"message": "You are authenticated!"}
 
 @app.post('/response')
 def response(message: str = Form(...)):

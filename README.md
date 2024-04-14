@@ -6,7 +6,7 @@
 
 The Moroccan Recipe Recommender is an AI-based system that provides recommendations for Moroccan recipes. 
 
-### Backend:
+- ### Backend:
 
 The API offers endpoints for retrieving recipe recommendations, user authentication, and more.
 

@@ -16,19 +16,23 @@ To run the API locally, follow these steps:
    ```bash
    git clone https://github.com/Moroccan-Data-Scientists/Moroccan-Recipe-CHATBOT-Recommendation-SYSTEM
    ```
-2. Install the dependencies:
+2. Locate the api directory:
+```
+cd Moroccan-Recipe-CHATBOT-Recommendation-SYSTEM/web/Backend
+```
+3. Install the dependencies:
 ```
 pip install -r requirements.txt
 ```
-3. Run the server
+4. Run the server
 ```
 uvicorn main:app --reload
 ```
-4. Access from the browser
+5. Access from the browser
 ```
 http://localhost:8000
 ```
-5. Access the Swagger UI documentation:
+6. Access the Swagger UI documentation:
 ```
 http://localhost:8000/docs
 ```

@@ -3,6 +3,8 @@ from fastapi.responses import HTMLResponse
 from sympy import content
 from user.manage import route
 from user.auth import protected_route
+
+
 app = FastAPI()
 app.include_router(route)
 

@@ -1,0 +1,21 @@
+{
+  "detectedConfig": {
+    "typescript": false,
+    "naming": "Kebab Case",
+    "unit": "em",
+    "framework": "react",
+    "styling": "CSS"
+  },
+  "locofyConfig": {
+    "project": "Moroccan Recipe CHATBOT",
+    "id": "661c56148389d1740d9a2f22",
+    "framework": "react",
+    "typescript": true,
+    "styling": "Tailwind",
+    "unit": "px",
+    "naming": "Pascal Case",
+    "path": "public/",
+    "componentsPath": "/Volumes/storage2/Programing/web Apps/Moroccan-Recipe-CHATBOT-Recommendation-SYSTEM/src/components",
+    "screensPath": "/Volumes/storage2/Programing/web Apps/Moroccan-Recipe-CHATBOT-Recommendation-SYSTEM/src/pages"
+  }
+}

@@ -12,3 +12,83 @@ body {
 ::after {
   border-width: 0;
 }
+/* ------------------------- colors --------------------------------- */
+
+:root {
+  /* primary */
+  --color-primary: #A46846;
+  --color-primary-contrast: #ffffff;
+  --color-primary-shade1: #9A6241;
+  --color-primary-shade2: #976041;
+  --color-primary-shade3: #935C3E;
+  --color-primary-shade4: #89573A;
+  --color-primary-tint1: #BB7751;
+  --color-primary-tint2: #C9835B;
+  --color-primary-tint3: #E4976C;
+  /* secondary */
+  --color-secondary: #61230C;
+  --color-secondary-contrast: #edf2f5e5;
+  --color-secondary-shade1: #5C210C;
+  --color-secondary-shade2: #551E0A;
+  --color-secondary-shade3: #521B07;
+  --color-secondary-shade4: #4B1C0B;
+  --color-secondary-shade5: #4E1A07;
+  --color-secondary-tint1: #843010;
+  --color-secondary-tint2: #9F3C17;
+  /* tertiary */
+  --color-tertiary: #B44300;
+  --color-tertiary-contrast: #ffffff;
+  --color-tertiary-shade1: #AD4203;
+  --color-tertiary-shade2: #A54208;
+  --color-tertiary-shade3: #9E3D03;
+  --color-tertiary-shade4: #983B03;
+  --color-tertiary-tint1: #D25104;
+  /* Fourthly */
+  --color-Fourthly: #CD8E6D;
+  --color-Fourthly-contrast: #ffffff;
+  --color-Fourthly-shade1: #bf8566;
+  --color-Fourthly-shade2: #ac775a;
+  --color-Fourthly-shade3: #9c6b51;
+  --color-Fourthly-shade4: #8b614a;
+  --color-Fourthly-tint1: #dd9b77;
+  --color-Fourthly-tint2: #eca782;
+  --color-Fourthly-tint3: #D5CFCF;
+  /* success */
+  --color-success: #54AF3F;
+  --color-success-contrast: #ffffff;
+  --color-success-shade: #41A62A;
+  --color-success-tint1: #5EB34A;
+  --color-success-tint2: #70BC5F;
+  --color-success-tint3: #A0D294;
+  --color-success-tint4: #D0E9CA;
+  /* warning */
+  --color-warning: #FCB437;
+  --color-warning-contrast: #000000;
+  --color-warning-shade: #FCAC21;
+  --color-warning-tint1: #FCB842;
+  --color-warning-tint2: #FCC058;
+  --color-warning-tint3: #FDD590;
+  --color-warning-tint4: #FEEAC8;
+  /* danger */
+  --color-danger: #E4241F;
+  --color-danger-contrast: #ffffff;
+  --color-danger-shade: #E10C06;
+  --color-danger-tint1: #E5312C;
+  --color-danger-tint2: #E84844;
+  --color-danger-tint3: #F08582;
+  --color-danger-tint4: #F7C2C1;
+  /* dark */
+  --color-dark: #393939;
+  --color-dark-contrast: #ffffff;
+  --color-dark-shade: rgb(35, 35, 35);
+  --color-dark-tint1: #444444;
+  --color-dark-tint2: #5A5A5A;
+  --color-dark-tint3: #919191;
+  --color-dark-tint4: #C8C8C8;
+  --color-dark-tint5: #E6E6E6;
+  --color-dark-tint6: #F5F5F5;
+  /* title*/
+  --font-title-primary: 'Teko', sans-serif;
+  --color-dark-tint6: #F5F5F5;
+  --text-color: #000000;
+}

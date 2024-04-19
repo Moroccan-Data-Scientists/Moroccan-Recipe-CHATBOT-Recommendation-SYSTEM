@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CuisinAI - User</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme&amp;display=swap">
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body style="background: linear-gradient(50deg, #fdb88d 0%, #ffeaba 40%, #ffffff 100%);">
+    <div class="container"><input type="checkbox" id="flip">
+        <div class="cover" style="border-style: none;">
+            <div class="front"><img src="../static/img/image-2@2x.png" alt=""></div>
+            <div class="back"><img class="backImg" src="../static/img/image-2@2x.png" alt="">
+                <div class="text"><span class="text-1">Complete miles of journey <br> with one step</span><span class="text-2">Let's get started</span></div>
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title"><span style="color: darkblue;font-weight: bold; font-family:Acme, sans-serif;">Login</span></div>
+                    <form action="/user/login" method="post">
+                        <div class="input-boxes">
+                            <div class="input-box"><i class="fas fa-envelope"></i><input class="form-control" type="email" name='username' placeholder="Email" required="" ></div>
+                            <div class="input-box"><i class="fas fa-lock"></i><input type="password" placeholder="Password" name='password' required=""></div>
+                            <div class="text" style="text-align: right;font-size: 12px;"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot password?</a></div>
+                            <div class="button input-box"><input type="submit" value="Sumbit" style="height: 45px;"></div>
+                            <div class="text sign-up-text"><span>Don't have an account? </span><label class="form-label" for="flip">&nbsp;Sign up</label></div>
+                            <div class="d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                                <a class="d-flex justify-content-center align-items-center btn btn-primary" href="/user/oauth" style="width: 370px;background: var(--bs-body-bg);color: var(--bs-emphasis-color);text-align: center;" role="button"><img style="color: transparent;font-size: 20px;width: 22px;height: 22px;" src="https://image.similarpng.com/very-thumbnail/2020/12/Flat-design-Google-logo-design-Vector-PNG.png">&nbsp;&nbsp;Sign In with Google</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-form">
+                    <div class="title"><span style="font-weight: bold; color: darkblue; font-family:Acme, sans-serif;">Sign Up</span></div>
+                    <form id="signup" action="user/signup" method="post">
+                        <div class="input-boxes">
+                            <div class="input-box"><i class="fas fa-user"></i><input type="text" placeholder="Name" name='fullname' required=""></div>
+                            <div class="input-box"><i class="fas fa-envelope"></i><input class="form-control" type="email" name='email' placeholder="Email" required=""></div>
+                            <div class="input-box"><i class="fas fa-lock"></i><input type="password" placeholder="Password" name='password' required=""></div>
+                            <div class="input-box"><i class="fas fa-lock"></i><input type="password" placeholder="Confirm Password" name='confirm_password' required=""></div>
+                            <div class="button input-box"><input type="submit" value="Sumbit" style="height: 45px;"></div>
+                            <div class="text sign-up-text"><span>Already have an account? </span><label class="form-label" for="flip">&nbsp;Login</label></div>
+                            <!-- <div class="d-lg-flex justify-content-lg-center align-items-lg-center"><a class="btn btn-primary" href="/user/oauth" style="text-align: center;background: var(--bs-body-bg);color: var(--bs-emphasis-color);" role="button">Sign Up with Google</a></div> -->
+                            <div class="d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                                <a class="d-flex justify-content-center align-items-center btn btn-primary" href="/user/oauth" style="width: 370px;background: var(--bs-body-bg);color: var(--bs-emphasis-color);text-align: center;" role="button"><img style="color: transparent;font-size: 20px;width: 22px;height: 22px;" src="https://image.similarpng.com/very-thumbnail/2020/12/Flat-design-Google-logo-design-Vector-PNG.png">&nbsp;&nbsp;Sign Up with Google</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-open">
+        <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Email Verification</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enter your email to receive a verification code</p>
+                        <form action="/user/forgot-password" method="post" style="height: 250px;margin-top: 32px;">
+                            <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-center form-group"><input class="form-control" type="email" placeholder="Email" required="required" 
+                               name="email" style="width: 420px;" /></div>
+                            <div class="d-xxl-flex justify-content-xxl-center align-items-xxl-center form-group" style="margin-top: 31px;"><button class="btn btn-primary d-xxl-flex justify-content-xxl-center align-items-xxl-center btn-block btn-lg" type="submit" value="Send" style="height: 35px;width: 90%;text-align: center;font-size: 18px;">Send</button></div>
+                        </form>                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

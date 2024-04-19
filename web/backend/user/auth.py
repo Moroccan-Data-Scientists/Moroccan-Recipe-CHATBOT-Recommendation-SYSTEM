@@ -11,8 +11,8 @@ ALGORITHM = "HS256"
 TOKEN_EXPIRE_MINUTES = 5 # For demo, we set 5min as the lifetime for the generated token
 
 
-def create_access_token(username: str, expires_delta: timedelta):
-    to_encode = {"sub": username, "exp": datetime.utcnow() + expires_delta}
+def create_access_token(email: str, expires_delta: timedelta):
+    to_encode = {"sub": email, "exp": datetime.utcnow() + expires_delta}
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
@@ -20,10 +20,10 @@ def create_access_token(username: str, expires_delta: timedelta):
 def verify_token(token: str):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username = payload.get("sub")
-        user = fetch_user(username)
+        email = payload.get("sub")
+        user = fetch_user({"email": email})
         if user:
-            return username
+            return user
         else:
             return None  # User not found
     except jwt.ExpiredSignatureError:
@@ -37,15 +37,15 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Authenticate user function
-def authenticate_user(username: str, password: str):
-    user = fetch_user(username)
-    if user and password == user["password"]:
+def authenticate_user(email: str, password: str):
+    user = fetch_user({"email": email, "password": password})
+    if user:
         return user
     return None
 
 
-def create_access_token(username: str, expires_delta: timedelta):
-    to_encode = {"sub": username, "exp": datetime.utcnow() + expires_delta}
+def create_access_token(email: str, expires_delta: timedelta):
+    to_encode = {"sub": email, "exp": datetime.utcnow() + expires_delta}
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
